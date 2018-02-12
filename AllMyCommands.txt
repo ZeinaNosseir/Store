@@ -1,0 +1,148 @@
+Zeinas-MacBook-Air:~ zeinanosseir$ mkdir Store
+Zeinas-MacBook-Air:~ zeinanosseir$ cd Store
+Zeinas-MacBook-Air:Store zeinanosseir$ git init
+Initialized empty Git repository in /Users/zeinanosseir/Store/.git/
+Zeinas-MacBook-Air:Store zeinanosseir$  git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.1.txt
+	3.1.txt
+	5.1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Zeinas-MacBook-Air:Store zeinanosseir$ git add .
+Zeinas-MacBook-Air:Store zeinanosseir$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   1.1.txt
+	new file:   3.1.txt
+	new file:   5.1.txt
+
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m "I added three text files"
+[master (root-commit) 00c97ed] I added three text files
+ 3 files changed, 3 insertions(+)
+ create mode 100755 1.1.txt
+ create mode 100755 3.1.txt
+ create mode 100755 5.1.txt
+Zeinas-MacBook-Air:Store zeinanosseir$ 
+Zeinas-MacBook-Air:Store zeinanosseir$ git rm 3.1.txt
+rm '3.1.txt'
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    3.1.txt
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m "I deleted 3.1.txt"
+[master 07d6c42] I deleted 3.1.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100755 3.1.txt
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git log
+commit 07d6c42e5889f7646472a9acc28fbe53959c88b0 (HEAD -> master)
+Author: zeina <nosseirzeina@gmail.com>
+Date:   Mon Feb 12 19:33:11 2018 +0200
+
+    I deleted 3.1.txt
+
+commit 00c97edbafffed3f792146dd483cff6194e0823a
+Author: zeina <nosseirzeina@gmail.com>
+Date:   Mon Feb 12 19:23:19 2018 +0200
+
+    I added three text files
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git revert 07d6c42e5889f7646472a9acc28fbe53959c88b0
+
+Revert "I deleted 3.1.txt"
+
+This reverts commit 07d6c42e5889f7646472a9acc28fbe53959c88b0.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#       new file:   3.1.txt
+#
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+"~/Store/.git/COMMIT_EDITMSG" 11L, 298C
+
+Zeinas-MacBook-Air:~ zeinanosseir$ git init
+Initialized empty Git repository in /Users/zeinanosseir/.git/
+Zeinas-MacBook-Air:~ zeinanosseir$ cd Store
+Zeinas-MacBook-Air:Store zeinanosseir$ git init
+Reinitialized existing Git repository in /Users/zeinanosseir/Store/.git/
+Zeinas-MacBook-Air:Store zeinanosseir$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   3.1.txt
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m "I returned the deleted file"
+[master 078de1a] I returned the deleted file
+ 1 file changed, 1 insertion(+)
+ create mode 100755 3.1.txt
+
+Zeinas-MacBook-Air:Store zeinanosseir$ touch README.md 
+Zeinas-MacBook-Air:Store zeinanosseir$ git branch ReadMe
+Zeinas-MacBook-Air:Store zeinanosseir$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git add README.md
+Zeinas-MacBook-Air:Store zeinanosseir$ git status
+On branch ReadMe
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   README.md
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m "I added the ReadMe file"
+[ReadMe 098ce3b] I added the ReadMe file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 README.md
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+Zeinas-MacBook-Air:Store zeinanosseir$ git merge readme
+Updating 078de1a..098ce3b
+Fast-forward
+ README.md | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 README.md
+Zeinas-MacBook-Air:Store zeinanosseir$ 
+
+
+
+
+
+
+
+
+
+
