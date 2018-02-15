@@ -135,7 +135,35 @@ Fast-forward
  README.md | 12 ++++++++++++
  1 file changed, 12 insertions(+)
  create mode 100644 README.md
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m " merge done"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+	AllMyCommands.txt
+
+nothing added to commit but untracked files present
+Zeinas-MacBook-Air:Store zeinanosseir$ git add AllMyCommands
+fatal: pathspec 'AllMyCommands' did not match any files
+Zeinas-MacBook-Air:Store zeinanosseir$ git add AllMyCommands.txt
+Zeinas-MacBook-Air:Store zeinanosseir$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   AllMyCommands.txt
+
+Zeinas-MacBook-Air:Store zeinanosseir$ git commit -m "I added AllMyCommands.txt"
+[master 879177b] I added AllMyCommands.txt
+ 1 file changed, 148 insertions(+)
+ create mode 100755 AllMyCommands.txt
 Zeinas-MacBook-Air:Store zeinanosseir$ 
+
 
 
 
